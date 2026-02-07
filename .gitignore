@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+
+# Editor files
+.vscode/
+.idea/
+
+# Node (if we add later)
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+.cache/
