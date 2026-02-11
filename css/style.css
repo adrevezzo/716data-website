@@ -445,6 +445,12 @@ a:hover {
     .hero-subtitle {
         font-size: 1.1rem;
     }
+
+    .hero-note {
+    font-size: 0.85rem;
+    color: #a0aec0;
+    margin-top: 12px;
+    }   
     
     .form-row {
         grid-template-columns: 1fr;
