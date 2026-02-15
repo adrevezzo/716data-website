@@ -40,7 +40,7 @@ h1 {
 h2 {
     font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 h3 {
@@ -161,20 +161,20 @@ a:hover {
 /* Hero Section         */
 /* ==================== */
 .hero {
-    padding: 160px 0 100px;
+    padding: 140px 0 60px;
     background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
     text-align: center;
 }
 
 .hero h1 {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     color: #4a5568;
     max-width: 600px;
-    margin: 0 auto 32px;
+    margin: 0 auto 28px;
 }
 
 .hero-note {
@@ -184,20 +184,27 @@ a:hover {
 }
 
 /* ==================== */
-/* Services Section     */
+/* Section Spacing - CONSISTENT */
 /* ==================== */
-.services {
-    padding: 100px 0;
+.services,
+.demo-section,
+.how-it-works,
+.about,
+.contact {
+    padding: 60px 0;
 }
 
 .section-subtitle {
     font-size: 1.1rem;
     color: #718096;
-    max-width: 600px;
-    margin: 0 auto 48px;
+    max-width: 700px; /* increased from 600px */
+    margin: 0 auto 36px;
     text-align: center;
 }
 
+/* ==================== */
+/* Services Section     */
+/* ==================== */
 .services h2 {
     text-align: center;
 }
@@ -205,12 +212,13 @@ a:hover {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    gap: 28px;
+    margin-top: 36px;
 }
 
 .service-card {
     background: #f7fafc;
-    padding: 32px;
+    padding: 28px;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -224,7 +232,7 @@ a:hover {
 .service-icon {
     font-size: 2.5rem;
     color: #1a365d;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .service-card h3 {
@@ -237,10 +245,125 @@ a:hover {
 }
 
 /* ==================== */
+/* Demo Section         */
+/* ==================== */
+.demo-section {
+    background: linear-gradient(135deg, #f8f9fc 0%, #f1f3f8 100%);
+}
+
+.demo-section h2 {
+    text-align: center;
+}
+
+.demo-section .section-subtitle {
+    margin-bottom: 32px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    max-width: 920px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Video duration badge */
+.video-duration {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+}
+
+/* Subtle play button on hover */
+.video-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(26, 54, 93, 0.9);
+    border-radius: 50%;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-wrapper:hover::before {
+    opacity: 1;
+}
+
+.video-wrapper::after {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    color: white;
+    font-size: 28px;
+    z-index: 6;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-wrapper:hover::after {
+    opacity: 1;
+}
+
+/* Demo CTAs */
+.demo-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.demo-actions .btn {
+    min-width: 180px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Remove old single CTA styles */
+.demo-cta {
+    display: none;
+}
+
+.sample-link {
+    display: none;
+}
+
+/* ==================== */
 /* How It Works Section */
 /* ==================== */
 .how-it-works {
-    padding: 100px 0;
     background: #1a365d;
     color: #fff;
 }
@@ -257,8 +380,8 @@ a:hover {
 .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-    margin-top: 48px;
+    gap: 40px;
+    margin-top: 36px;
 }
 
 .step {
@@ -276,12 +399,12 @@ a:hover {
     font-size: 1.25rem;
     font-weight: 700;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .step h3 {
     color: #fff;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .step p {
@@ -293,19 +416,15 @@ a:hover {
 /* ==================== */
 /* About Section        */
 /* ==================== */
-.about {
-    padding: 100px 0;
-}
-
 .about-content {
     display: grid;
     grid-template-columns: 1fr 300px;
-    gap: 64px;
+    gap: 56px;
     align-items: center;
 }
 
 .about-text h2 {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .about-text p {
@@ -322,7 +441,6 @@ a:hover {
 /* Contact Section      */
 /* ==================== */
 .contact {
-    padding: 100px 0;
     background: #f7fafc;
     text-align: center;
 }
@@ -445,14 +563,21 @@ a:hover {
     }
     
     .hero {
-        padding: 120px 0 80px;
+        padding: 110px 0 50px;
     }
     
     .hero-subtitle {
         font-size: 1.1rem;
     }
-
-   
+    
+    /* Tighter mobile spacing */
+    .services,
+    .demo-section,
+    .how-it-works,
+    .about,
+    .contact {
+        padding: 50px 0;
+    }
     
     .form-row {
         grid-template-columns: 1fr;
